@@ -13,11 +13,12 @@
 
 <br /><br />
 <h2>Reviews</h2>
+<% if (restaurants.reviews.length) { %>
 <form id="add-review-form" method="POST" action="/restaurants/<%= restaurants._id %>/reviews">
 	<lable>Username</lable>
-	<input name="username" /></br>
+	<input name="username" /></br></br>
 	<label>Review:</label>
-  	<textarea name="content"></textarea></br>
+  	<textarea name="content"></textarea></br></br>
   	<label>Rating:</label>
   	<select name="rating">
     	<option value="1">1</option>
@@ -25,11 +26,10 @@
     	<option value="3">3</option>
     	<option value="4">4</option>
     	<option value="5">5</option>
-  	</select></br>
+  	</select></br></br>
   	<input type="submit" value="Add Review" />
 </form>
 
-<% if (restaurants.reviews.length) { %>
 <table>
   <thead>
     <tr>
@@ -45,11 +45,8 @@
 			<td><%= r.createdAt.toLocaleDateString() %></td>
 			<td><%= r.content %></td>
 			<td><%= r.rating %></td>
-			<td><form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
-				<input type="submit" value="Delete This Review" />
-			</form></td>
     	</tr>
-    <% }) %>
+    <% }); %>
 </tbody>
 </table>
 <% } else { %>
