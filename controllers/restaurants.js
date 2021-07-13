@@ -38,7 +38,8 @@ function create(req, res) {
 }
 
 function deleteOne(req, res) {
-    Restaurant.findByIdAndDelete(req.params.id, function(err){
+    Restaurant.findByIdAndDelete(req.params.id, function(err) {
+        if(err) alert(error);
         res.redirect('/restaurants');
     });
 }
