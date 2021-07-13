@@ -18,14 +18,14 @@ function index(req, res) {
 
 function show(req, res) {
     Restaurant.findById(req.params.id, function(err, restaurants){
-        res.render('restaurants/show', {title: 'Restaurant Detailed Information', restaurants})
-    })
+        res.render('restaurants/show', {title: 'Restaurant Detailed Information', restaurants});
+    });
 }
 
 function newRestaurant(req, res) {
     res.render('restaurants/new', {
         title: 'Add Restaurant'
-    })
+    });
 }
 
 function create(req, res) {
@@ -34,11 +34,11 @@ function create(req, res) {
     newRestaurant.save(function(err) {
         if (err) return res.render('restaurants/new');
         res.redirect(`/restaurants/${newRestaurant._id}`);
-    })
+    });
 }
 
 function deleteOne(req, res) {
     Restaurant.findByIdAndDelete(req.params.id, function(err){
-        res.dedirect('/restaurants')
-    })
+        res.redirect('/restaurants');
+    });
 }

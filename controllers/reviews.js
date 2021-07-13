@@ -3,7 +3,7 @@ const restaurants = require('./restaurants');
 
 module.exports = {
   create,
-  delete: deleteOne,
+  delete: deleteReview,
 };
 
 function create(req, res) {
@@ -15,7 +15,7 @@ function create(req, res) {
   });
 }
 
-function deleteOne(req, res) {
+function deleteReview(req, res) {
     Restaurant.findOne({"reviews._id" : req.params.id}, function(err, restaurant) {
         restaurant.reviews.id(req.params.id).remove();
         restaurant.save(function(err) {
