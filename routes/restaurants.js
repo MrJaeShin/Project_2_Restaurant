@@ -1,9 +1,13 @@
 var express = require('express');
 var router = express.Router();
+var restaurantsCtrl = require('../controllers/restaurants')
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+
+router.get('/', restaurantsCtrl.index);
+router.get('/new', restaurantsCtrl.new);
+router.get('/:id', restaurantsCtrl.show);
+router.post('/', restaurantsCtrl.create);
+router.delete('/:id', restaurantsCtrl.delete);
+
 
 module.exports = router;
