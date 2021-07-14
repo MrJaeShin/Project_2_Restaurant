@@ -1,20 +1,18 @@
 <%- include('../partials/header') %>
 
-	<h2>Add a New Restaurant</h2>
-	<form action="/restaurants" method="POST">
-		<label>
-            Restaurant Name: <input type="string" name="name" />
-        </label><br />
-		<label>
-			Address:  <input type="string" name="address" />
-		</label><br />
-		<label>
-            Description: <input type="string" name="description" /> 
-        </label><br />
-		<label>
-            Parking Availablility: <input type="checkbox" name="parking">
-        </label><br />
-		<input type="submit" value="Submit" />
-	</form>
+<h2>Add a New Restaurant</h2>
+
+<section>
+  <form action="/restaurants" method="POST">
+    <label> Restaurant Name: <input type="string" name="name" /> </label><br />
+    <label> Address: <input type="string" name="address" /> </label><br />
+    <label> Description: <input type="string" name="description" /> </label
+    ><br />
+    <label>
+      Parking Availablility: <input type="checkbox" name="parking" /> </label
+    ><br />
+    <button type="submit">Submit</button>
+  </form>
+</section>
 
 <%- include('../partials/footer') %>

@@ -4,6 +4,7 @@ mongoose.connect("mongodb://localhost/restaurants", {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
+  useFindAndModify:false,
 });
 
 // shortcut to mongoose.connection object

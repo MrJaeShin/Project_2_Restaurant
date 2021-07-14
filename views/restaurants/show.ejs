@@ -9,12 +9,15 @@
   <div><%= restaurants.description %></div>
   <div>Parking Availability:</div>
   <div><%= restaurants.parking ? 'Yes' : 'No' %></div>
-</section>
-<form action="/restaurants/<%= restaurants._id %>/edit">
+  <form action="/restaurants/<%= restaurants._id %>/edit">
 	<button type="submit">EDIT</button>
 </form>
-<br /><br />
+</section>
+</br></br>
+
+<section>
 <h2>Reviews</h2>
+
 <form id="add-review-form" method="POST" action="/restaurants/<%= restaurants._id %>/reviews">
 	<lable>Username</lable>
 	<input name="username" /></br>
@@ -55,5 +58,6 @@
 </table>
 <% } else { %>
 <h5>No Reviews Yet</h5>
+</section>
 
 <% } %> <%- include('../partials/footer') %>

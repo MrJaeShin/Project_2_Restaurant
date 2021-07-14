@@ -1,18 +1,19 @@
 <%- include('../partials/header') %>
 
 <h1>Korean Restaurants</h1>
-<a href='/restaurants/new'>Add New Restaurant</a>
+<a href="/restaurants/new">Add New Restaurant</a>
 <% restaurants.forEach(function(restaurant) { %>
-<section id="show-page">
+<section>
   <div>Name:</div>
   <div><%= restaurant.name %></div>
   <div>Address:</div>
   <div><%= restaurant.address %></div>
   <a href="/restaurants/<%= restaurant._id %>">DETAILS</a>
-  <form action="/restaurants/<%= restaurant._id %>?_method=DELETE" method="POST">
+  <form
+    action="/restaurants/<%= restaurant._id %>?_method=DELETE"
+    method="POST"
+  >
     <button type="submit">DELETE</button>
   </form>
 </section>
-<% }); %>
-
-<%- include('../partials/footer') %>
+<% }); %> <%- include('../partials/footer') %>
