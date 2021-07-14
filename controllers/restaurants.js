@@ -25,9 +25,7 @@ function show(req, res) {
 }
 
 function newRestaurant(req, res) {
-    res.render('restaurants/new', {
-        title: 'Add Restaurant'
-    });
+    res.render('restaurants/new', {title: 'Add Restaurant'});
 }
 
 function create(req, res) {
