@@ -47,7 +47,6 @@ function deleteOne(req, res) {
 }
 
 async function edit(req,res) {
-    console.log("edit")
     try {
         const restaurant = await Restaurant.findById(req.params.id);
         res.render('restaurants/edit', {title: 'Update Restaurant Information', restaurant});
@@ -57,13 +56,12 @@ async function edit(req,res) {
 }
 
 async function update(req, res) {
-    console.log("update")
-    try{
+    try {
         req.body.parking = !!req.body.parking;
         const updatedRestaurant = await Restaurant.findByIdAndUpdate(req.params.id, req.body);
         updatedRestaurant.save();
         res.redirect(`/restaurants/${updatedRestaurant._id}`);
-    }catch(err){
+    } catch(err) {
         res.send(err);
     };
 }
