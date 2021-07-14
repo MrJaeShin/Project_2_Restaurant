@@ -46,11 +46,24 @@ function deleteOne(req, res) {
     });
 }
 
-function edit(req,res) {
-    Restaurant.findById(req.params.id);
-    res.render('restaurants/edit', {title: 'Update Restaurant Information', restaurants});
+async function edit(req,res) {
+    console.log("edit")
+    try {
+        const restaurant = await Restaurant.findById(req.params.id);
+        res.render('restaurants/edit', {title: 'Update Restaurant Information', restaurant});
+    } catch(err) {
+        res.send(err)
+    };
 }
 
-function update(req, res) {
-
+async function update(req, res) {
+    console.log("update")
+    try{
+        req.body.parking = !!req.body.parking;
+        const updatedRestaurant = await Restaurant.findByIdAndUpdate(req.params.id, req.body);
+        updatedRestaurant.save();
+        res.redirect(`/restaurants/${updatedRestaurant._id}`);
+    }catch(err){
+        res.send(err);
+    };
 }

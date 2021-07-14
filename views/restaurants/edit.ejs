@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
-	<h2>Add a New Restaurant</h2>
-	<form action="/restaurants" method="POST">
+	<h2>Edit Restaurant Information</h2>
+	<form action="/restaurants/<% restaurant._id %>/edit?_method=PUT" method="POST">
 		<label>
             Restaurant Name: <input type="string" name="name" />
         </label><br />
@@ -12,7 +12,7 @@
             Description: <input type="string" name="description" /> 
         </label><br />
 		<label>
-            Parking Availablility: <input type="checkbox" name="parking">
+            Parking Availablility: <input type="checkbox" name="parking" />
         </label><br />
 		<button type="submit">Update</button>
 	</form>
