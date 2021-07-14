@@ -46,8 +46,11 @@ function deleteOne(req, res) {
     });
 }
 
-function edit(req, res) {
+function edit(req,res) {
     Restaurant.findById(req.params.id);
-    res.render('restaurants/')
+    res.render('restaurants/edit', {title: 'Update Restaurant Information', restaurants});
 }
 
+function update(req, res) {
+
+}
