@@ -15,7 +15,6 @@ Visit the app here! ==> [Restaurants APP](https://mrjaeshin.github.io/Project_1_
 ## Technologies Used :
 
 This app uses:
-<li>Javascript
 <li>CSS
 <li>Node
 <li>MongoDB
