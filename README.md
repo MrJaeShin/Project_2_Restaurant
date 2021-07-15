@@ -10,7 +10,7 @@ This app allows you to add and update the list of restaurants in LA. You can see
 
 I live in LA, but it was difficult to search specific places to go on yelp due to too many selections. I wanted to create a list of me and my friends' favorite spots.
 
-Visit the app here! ==> [Restaurants APP](https://mrjaeshin.github.io/Project_1_Blackjack/)
+Visit the app here! ==> [Restaurants APP](https://project2-restaurants.herokuapp.com/)
 
 ## Technologies Used :
 
