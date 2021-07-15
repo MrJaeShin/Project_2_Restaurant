@@ -1,6 +1,6 @@
 # Restaurants_in_LA
 
-![Screenshot](/public/images/lading.png)
+![Screenshot](/public/images/landing.png)
 ![Screenshot](/public/images/list.png)
 ![Screenshot](/public/images/detail.png)
 
