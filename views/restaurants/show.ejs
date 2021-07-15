@@ -1,6 +1,7 @@
 <%- include('../partials/header') %>
 
 <h1>Restaurant Information</h1>
+<main>
 <section>
   <div>Name:</div>
   <div><%= restaurants.name %></div>
@@ -36,7 +37,7 @@
 </form>
 
 <% if (restaurants.reviews.length) { %>
-<table >
+<table>
   <thead>
     <tr>
       <th>Date</th>
@@ -46,7 +47,7 @@
 	  <th></th>
     </tr>
 </thead>
-<tbody>
+<tbody class="indReview">
 	<% restaurants.reviews.forEach((r) => { %>
 		<tr>
 			<td><%= r.createdAt.toLocaleDateString() %></td>
@@ -60,5 +61,5 @@
 <% } else { %>
 <h5>No Reviews Yet</h5>
 </section>
-
+</main>
 <% } %> <%- include('../partials/footer') %>

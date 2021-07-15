@@ -41,3 +41,13 @@ button {
 h1 {
   color: tomato;
 }
+
+main {
+  background-color: rgba(221, 192, 187, 0.3);
+  border-color: solid black;
+  padding: 15px;
+}
+
+.indReview {
+  text-align: center;
+}
