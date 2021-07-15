@@ -1,10 +1,9 @@
 <%- include('../partials/header') %>
 
 <h1>Korean Restaurants</h1>
-<a href="/restaurants/new">Add New Restaurant</a>
 
-<section class="eachCard">
 <% restaurants.forEach(function(restaurant) { %>
+<section class="eachCard">
   <div>Name:</div>
   <div><%= restaurant.name %></div>
   <div>Address:</div>
@@ -17,4 +16,7 @@
     <button type="submit">DELETE</button>
   </form>
 </section>
-<% }); %> <%- include('../partials/footer') %>
+<% }); %> 
+
+
+<%- include('../partials/footer') %>
