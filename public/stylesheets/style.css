@@ -1,12 +1,12 @@
 
 nav {
-  background-color: rgba(107, 92, 107, 0.8);
+  background-color: rgb(184, 166, 184);
   font-size: large;
   background-size: cover;
 }
 
 .eachCard {
-  background-color: rgba(221, 192, 187, 0.3);
+  background-color: rgba(221, 192, 187, 0.5);
   border-color: solid black;
   padding: 15px;
 }
@@ -22,7 +22,7 @@ body {
 }
 
 a {
-  color: white;
+  color: rgb(71, 84, 143);
   text-decoration: none;
 }
 
@@ -43,7 +43,7 @@ h1 {
 }
 
 main {
-  background-color: rgba(221, 192, 187, 0.3);
+  background-color: rgba(221, 192, 187, 0.5);
   border-color: solid black;
   padding: 15px;
 }
